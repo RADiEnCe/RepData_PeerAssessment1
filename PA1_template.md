@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ## Load the Required Data for Analysis
@@ -32,7 +37,7 @@ And here's a histogram about the distribution daily step totals:
 hist(dailysums)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 Now, compute the daily means and medians.
 
@@ -41,7 +46,7 @@ dailymean <- mean(dailysums)
 dailymedian <- median(dailysums)
 ```
 
-From the data, it can be computed that the mean of the daily step sums is 9354.2295082, while the median is 1.0395\times 10^{4}.
+From the data, it can be computed that the mean of the daily step sums is 9354.2295082, while the median is 1.0395 &times; 10<sup>4</sup>.
 
 
 ## What is the average daily activity pattern?
@@ -60,7 +65,7 @@ Plot the steps against the intervals
 plot(averageday, type = "l", xlab = "5-min interval", ylab = "steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png) 
 
 From the averageday named vector, it can be known that the interval with the most steps is the one starting at 08:35. There are, on average, 206.1698113 steps in that interval.
 
@@ -99,7 +104,7 @@ hist(dailysums, main = "Histogram of The Daily Sums", sub = "NAs counted as zero
 hist(dailysums2, main = "Histogram of the Daily Sums", sub = "NAs imputed", xlab = "Number of Steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
 
 ```r
 par(mfrow = c(1,1))
@@ -132,4 +137,4 @@ plot(averageweekend, type = "l", xlab = "Interval Index", ylab = "Number of Step
 plot(averageweekday, type = "l", xlab = "Interval Index", ylab = "Number of Steps", main = "On Weekdays")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 
+![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
